@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+<defs>
+  <filter id="soft11" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="11" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="9"/>
+  </filter>
+  <filter id="grain11"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="11"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .4  0 0 0 0 .3  0 0 0 .14 0"/></filter>
+</defs><g filter="url(#soft11)"><rect width="800" height="1000" fill="#E9E0CC"/><rect width="800" height="420" fill="#D6DBC6" opacity=".8"/><path d="M0 340 L0 347.7 L40 345.3 L80 343.5 L120 342.4 L160 341.9 L200 341.2 L240 340.1 L280 338.0 L320 335.1 L360 331.6 L400 328.2 L440 325.5 L480 324.3 L520 324.9 L560 327.3 L600 331.2 L640 336.0 L680 340.6 L720 344.6 L760 347.2 L800 348.5 L840 348.7 L800 2000 L0 2000 Z" fill="#AEB99B" opacity="1"/>
+    <rect y="500" width="800" height="500" fill="#C27D5E" opacity=".28"/><rect y="500" width="800" height="500" fill="#B58562" opacity=".35"/>
+    <ellipse cx="400" cy="780" rx="240" ry="70" fill="#F6F3EB" opacity=".8"/>
+    <path d="M278 500 h52 q4 80 -26 96 q-30 -16 -26 -96 Z" fill="#F1DDB0" opacity=".75"/><rect x="301" y="596" width="6" height="120" fill="#e9e2d0"/><path d="M454 500 h52 q4 80 -26 96 q-30 -16 -26 -96 Z" fill="#E8C78B" opacity=".75"/><rect x="477" y="596" width="6" height="120" fill="#e9e2d0"/>
+    <ellipse cx="240" cy="800" rx="32" ry="25.6" fill="#E8C24F" opacity=".95"/><ellipse cx="560" cy="820" rx="32" ry="25.6" fill="#E8C24F" opacity=".95"/><ellipse cx="608" cy="780" rx="32" ry="25.6" fill="#E8C24F" opacity=".95"/>
+    <ellipse cx="160" cy="700" rx="26" ry="10" transform="rotate(-30 160 700)" fill="#788565" opacity=".8"/><ellipse cx="172" cy="694" rx="26" ry="10" transform="rotate(-30 160 700)" fill="#788565" opacity=".8"/><ellipse cx="184" cy="688" rx="26" ry="10" transform="rotate(-30 160 700)" fill="#788565" opacity=".8"/><ellipse cx="196" cy="682" rx="26" ry="10" transform="rotate(-30 160 700)" fill="#788565" opacity=".8"/><ellipse cx="208" cy="676" rx="26" ry="10" transform="rotate(-30 160 700)" fill="#788565" opacity=".8"/><ellipse cx="220" cy="670" rx="26" ry="10" transform="rotate(-30 160 700)" fill="#788565" opacity=".8"/></g><rect width="800" height="1000" filter="url(#grain11)"/></svg>

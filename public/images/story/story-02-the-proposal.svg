@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+<defs>
+  <filter id="soft12" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="12" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="9"/>
+  </filter>
+  <filter id="grain12"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="12"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .4  0 0 0 0 .3  0 0 0 .14 0"/></filter>
+</defs><g filter="url(#soft12)"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9B98A"/><stop offset="1" stop-color="#F6E3C0"/></linearGradient></defs><rect width="800" height="1000" fill="url(#sky)"/><circle cx="400" cy="520" r="136" fill="#FBE7B5" opacity=".22"/><circle cx="400" cy="520" r="80" fill="#FBE7B5" opacity=".7"/><path d="M0 660 L0 678.6 L40 678.0 L80 675.2 L120 671.4 L160 668.1 L200 665.9 L240 664.8 L280 664.1 L320 662.7 L360 659.7 L400 654.9 L440 649.0 L480 643.3 L520 639.5 L560 638.7 L600 641.5 L640 647.0 L680 654.1 L720 660.9 L760 666.2 L800 669.1 L840 670.0 L800 2000 L0 2000 Z" fill="#C69B7A" opacity="1"/><path d="M0 740 L0 740.9 L40 739.9 L80 738.5 L120 735.9 L160 732.0 L200 726.9 L240 721.5 L280 717.0 L320 714.6 L360 715.0 L400 718.5 L440 724.7 L480 732.6 L520 740.8 L560 748.0 L600 753.2 L640 755.9 L680 756.5 L720 755.6 L760 754.2 L800 753.2 L840 753.0 L800 2000 L0 2000 Z" fill="#8C7F61" opacity="1"/><path d="M0 820 L0 803.9 L40 803.4 L80 804.3 L120 806.6 L160 810.2 L200 814.8 L240 819.8 L280 824.6 L320 828.8 L360 831.8 L400 833.6 L440 834.1 L480 833.5 L520 832.2 L560 830.7 L600 829.3 L640 828.3 L680 827.8 L720 827.6 L760 827.7 L800 827.5 L840 826.7 L800 2000 L0 2000 Z" fill="#4f5a3c" opacity="1"/>
+    <path d="M112.00000000000001 440 Q166.60000000000002 629 136.57000000000002 860 L87.43 860 Q57.40000000000001 629 112.00000000000001 440 Z" fill="#38412b" opacity=".92"/>
+  <circle cx="352" cy="750" r="16" fill="#3b432f"/>
+  <rect x="335" y="768" width="34" height="80" rx="10" fill="#3b432f"/><rect x="337" y="844" width="13" height="56" fill="#3b432f"/><rect x="354" y="844" width="13" height="56" fill="#3b432f"/>
+  <circle cx="463.99999999999994" cy="763.6363636363636" r="14.545454545454545" fill="#3b432f"/>
+  <path d="M451.2727272727272 780 Q463.99999999999994 772.7272727272727 476.7272727272727 780 L505.81818181818176 900 L422.18181818181813 900 Z" fill="#3b432f"/></g><rect width="800" height="1000" filter="url(#grain12)"/></svg>
