@@ -10,6 +10,8 @@ import { initRsvp, rsvpMarkup } from './rsvp.js';
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+// Content files use '/images/…' paths; this makes them work under any base URL (e.g. GitHub Pages).
+const asset = (p) => (/^(https?:|data:)/.test(p) ? p : import.meta.env.BASE_URL + String(p).replace(/^\//, ''));
 const escAttr = (s) => String(s).replace(/"/g, '&quot;');
 
 const head = (id, eyebrow, title, intro = '') => `
@@ -100,7 +102,7 @@ $('#story').innerHTML = `
         (c, i) => `
       <article class="chapter ${i % 2 ? 'chapter--flip' : ''}">
         <figure class="chapter__img reveal">
-          <div class="frame frame--double"><i class="frame-in"></i><img src="${c.image}" alt="${escAttr(c.alt)}" loading="lazy" /></div>
+          <div class="frame frame--double"><i class="frame-in"></i><img src="${asset(c.image)}" alt="${escAttr(c.alt)}" loading="lazy" /></div>
         </figure>
         <div class="chapter__text reveal" style="--d:.15s">
           <p class="eyebrow">${c.kicker}</p>
@@ -114,7 +116,7 @@ $('#story').innerHTML = `
 
 /* ── Vineyard banner (parallax) ─────────────────────────── */
 const banner = $('#banner');
-banner.style.backgroundImage = "url('/images/vineyard-banner.jpg')";
+banner.style.backgroundImage = `url('${asset('/images/vineyard-banner.jpg')}')`;
 if (!reduceMotion) {
   let ticking = false;
   const par = () => {
@@ -136,7 +138,7 @@ $('#gallery').innerHTML = `
         .map(
           (p, i) => `
         <button class="shot reveal" style="--d:${(i % 3) * 0.1}s;aspect-ratio:${p.ratio}" data-i="${i}" aria-label="Open photo: ${escAttr(p.alt)}">
-          <img src="${p.src}" alt="${escAttr(p.alt)}" loading="lazy" />
+          <img src="${asset(p.src)}" alt="${escAttr(p.alt)}" loading="lazy" />
           <span class="shot__cap">${p.caption || ''}</span>
         </button>`
         )
@@ -151,7 +153,7 @@ function showPhoto(i) {
   const p = gallery.photos[cur];
   lb.innerHTML = `
     <div class="lightbox__frame frame frame--double"><i class="frame-in"></i>
-      <img src="${p.src}" alt="${escAttr(p.alt)}" />
+      <img src="${asset(p.src)}" alt="${escAttr(p.alt)}" />
     </div>
     <p class="lightbox__cap">${p.caption || p.alt} <span>${cur + 1} / ${gallery.photos.length}</span></p>
     <button class="lb-btn lb-close" data-act="close" aria-label="Close">×</button>
