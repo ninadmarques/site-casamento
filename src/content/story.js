@@ -9,7 +9,7 @@ export const story = {
   chapters: [
     {
       kicker: 'Chapter One',
-      title: 'How We Met',
+      title: 'How we look',
       image: '/images/story/story-01-how-we-met.svg',
       alt: 'Placeholder illustration of an aperitivo table',
       text: [
